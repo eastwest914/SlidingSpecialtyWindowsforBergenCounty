@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sliding Windows by Deluxe | New Milford, NJ</title>
+<meta name="description" content="Sliding Windows by Deluxe: sliding, vinyl, aluminum, bay and casement windows for homes and commercial spaces in New Milford, NJ. Call 201-479-9571.">
+<link rel="canonical" href="http://slidingwindowsnj.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sliding Windows by Deluxe, New Milford NJ">
+<meta property="og:description" content="Sliding, vinyl, aluminum and bay windows for Bergen County homes and commercial buildings.">
+<meta property="og:url" content="http://slidingwindowsnj.com">
+<meta property="og:image" content="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80">
+<meta property="og:site_name" content="Sliding Windows by Deluxe">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0B1E33;--navy-2:#122A46;--gold:#C8992E;--gold-2:#E4B655;--paper:#F6F4EF;--steel:#5B7189;--ink:#1B2733;--line:#E1DCCF;--radius:16px;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Manrope', Arial, sans-serif;font-weight:400;background:var(--paper);color:var(--ink);line-height:1.7;}
+  h1,h2,h3,h4{font-family:'Fraunces', Georgia, serif;font-weight:600;color:var(--navy);margin:0 0 .5em 0;line-height:1.2;}
+  p{margin:0 0 1em 0;font-weight:400;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  section{display:none;}
+  section.active{display:block;}
+  header{position:sticky;top:0;z-index:100;background:rgba(11,30,51,0.97);backdrop-filter:blur(6px);color:#fff;}
+  .headbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;gap:16px;flex-wrap:wrap;}
+  .head-phone{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.05rem;color:var(--gold-2);white-space:nowrap;}
+  .head-phone svg{flex:none;}
+  nav.mainnav{display:flex;gap:26px;flex-wrap:wrap;}
+  nav.mainnav a{font-weight:500;font-size:.98rem;color:#EAF0F5;padding:6px 2px;border-bottom:2px solid transparent;transition:border-color .2s, color .2s;}
+  nav.mainnav a:hover, nav.mainnav a.current{color:var(--gold-2);border-bottom-color:var(--gold);}
+  .head-brand{display:flex;align-items:center;gap:10px;}
+  .logo-badge{position:relative;height:44px;width:150px;border-radius:10px;flex:none;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .logo-badge .logo-fallback-text{font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:.62rem;text-align:center;padding:0 4px;}
+  .logo-badge img{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;padding:4px;}
+  .head-brand span.brandname{font-weight:700;font-size:1rem;color:#fff;line-height:1.2;max-width:170px;font-family:'Fraunces',serif;}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg, var(--gold-2), var(--gold) 70%);color:var(--navy);font-weight:700;padding:11px 20px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 6px 16px rgba(200,153,46,.35);font-size:.95rem;white-space:nowrap;}
+  .btn:hover{filter:brightness(1.05);}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);box-shadow:none;}
+  .hero{background:linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, #0E2C48 100%);color:#fff;padding:72px 0 84px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(200,153,46,.18), transparent 70%);}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;}
+  .eyebrow{display:inline-block;color:var(--gold-2);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px;}
+  .hero h1{color:#fff;font-size:2.5rem;max-width:620px;}
+  .hero p.lead{color:#D3DEE8;font-size:1.08rem;max-width:560px;}
+  .hero-ctas{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap;}
+  .hero-stats{display:flex;gap:28px;margin-top:38px;flex-wrap:wrap;}
+  .hero-stats div{min-width:110px;}
+  .hero-stats strong{display:block;font-size:1.5rem;color:var(--gold-2);}
+  .hero-stats span{font-size:.85rem;color:#AFBECC;}
+  .photo-frame{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:8px;box-shadow:0 20px 50px rgba(0,0,0,.35);}
+  .photo-frame .photo-box{position:relative;border-radius:12px;width:100%;height:340px;overflow:hidden;background:linear-gradient(135deg, var(--navy-2), #17416b);}
+  .photo-frame .photo-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .section-pad{padding:68px 0;}
+  .section-head{max-width:680px;margin:0 auto 40px;text-align:center;}
+  .section-head .eyebrow{color:var(--gold);}
+  .section-head h2{font-size:2rem;}
+  .band-alt{background:#fff;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .card{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(11,30,51,.07);border:1px solid var(--line);}
+  .card h3{font-size:1.08rem;}
+  .icon-badge{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg, var(--navy), var(--navy-2));display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .svc-filterbar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:34px;}
+  .svc-filterbar button{border:1.5px solid var(--line);background:#fff;color:var(--navy);padding:8px 16px;border-radius:999px;font-family:'Manrope',sans-serif;font-size:.88rem;cursor:pointer;font-weight:700;}
+  .svc-filterbar button.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .svc-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 26px rgba(11,30,51,.08);border:1px solid var(--line);display:flex;flex-direction:column;}
+  .svc-thumb{position:relative;height:180px;width:100%;overflow:hidden;flex:none;background:linear-gradient(135deg, var(--navy), var(--navy-2));}
+  .svc-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .svc-card .svc-body{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;}
+  .svc-card h3{font-size:1.02rem;margin-bottom:8px;}
+  .svc-card p{font-size:.92rem;color:#3E4E5E;flex:1;}
+  .svc-cta{margin-top:12px;display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:700;font-size:.88rem;}
+  .floatcall{position:fixed;bottom:22px;right:22px;z-index:200;background:linear-gradient(135deg, var(--gold-2), var(--gold));color:var(--navy);width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(200,153,46,.5);}
+  .floatcall:hover{filter:brightness(1.06);}
+  .faq-item{border-bottom:1px solid var(--line);padding:0;}
+  .faq-q{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:18px 4px;font-family:'Manrope',sans-serif;}
+  .faq-q h4{font-size:1rem;margin:0;color:var(--navy);}
+  .faq-icon{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;line-height:1;transition:transform .25s ease, background .25s ease, color .25s ease;}
+  .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--gold);color:#fff;}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease, padding .3s ease;}
+  .faq-a p{margin:0 0 18px;color:#3E4E5E;padding-right:40px;}
+  .faq-item.open .faq-a{max-height:260px;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  form.contact-form{background:#fff;border-radius:var(--radius);padding:28px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(11,30,51,.07);}
+  form.contact-form label{display:block;font-weight:700;font-size:.88rem;margin:14px 0 6px;color:var(--navy);}
+  form.contact-form input, form.contact-form select, form.contact-form textarea{width:100%;padding:11px 12px;border-radius:10px;border:1.5px solid var(--line);font-family:'Manrope',sans-serif;font-size:.95rem;background:#FAFBFC;}
+  form.contact-form button{margin-top:20px;width:100%;justify-content:center;}
+  .contact-info-card{background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px;}
+  .contact-info-card h3{color:#fff;}
+  .contact-line{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;}
+  .contact-line svg{flex:none;margin-top:2px;}
+  .contact-line a, .contact-line span{color:#D3DEE8;font-size:.95rem;}
+  .map-wrap{margin-top:22px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);}
+  .map-wrap iframe{width:100%;height:320px;border:0;display:block;}
+  .social-row{display:flex;gap:10px;margin-top:18px;}
+  .social-row a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;}
+  .about-hero{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+  .about-hero .photo-box{height:360px;}
+  .badge-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;}
+  .badge-row div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;color:var(--navy);}
+  footer{background:var(--navy);color:#D3DEE8;padding:56px 0 24px;margin-top:20px;}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:34px;}
+  .foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .foot-brand span.brandname{color:#fff;font-weight:700;font-family:'Fraunces',serif;}
+  footer h4{color:#fff;font-size:.95rem;margin-bottom:14px;}
+  footer a{color:#AFBECC;font-size:.9rem;display:block;margin-bottom:9px;}
+  footer a:hover{color:var(--gold-2);}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem;color:#8B9BAC;}
+  @media(max-width:980px){.hero-grid{grid-template-columns:1fr;}.grid-3, .svc-grid{grid-template-columns:repeat(2,1fr);}.contact-grid{grid-template-columns:1fr;}.about-hero{grid-template-columns:1fr;}.foot-grid{grid-template-columns:1fr 1fr;}nav.mainnav{display:none;}}
+  @media(max-width:600px){.grid-3, .svc-grid, .grid-2{grid-template-columns:1fr;}.hero h1{font-size:1.9rem;}.headbar{justify-content:center;text-align:center;}.foot-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="headbar">
+    <a class="head-phone" href="tel:+12014799571" aria-label="Call Sliding Windows by Deluxe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="#E4B655" stroke-width="1.6" stroke-linejoin="round"/></svg>201-479-9571</a>
+    <nav class="mainnav" id="mainnav">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#about" data-route="about">About</a>
+      <a href="#services" data-route="services">Services</a>
+      <a href="#contact" data-route="contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="head-brand"><div class="logo-badge"><span class="logo-fallback-text">Sliding Windows by Deluxe</span><img src="https://slidingwindowsnj.com/images/logo.png" alt="Sliding Windows by Deluxe logo" loading="lazy" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div><span class="brandname">Sliding Windows by Deluxe</span></div>
+      <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<section id="home">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">New Milford, NJ &bull; Bergen County</span>
+        <h1>Sliding &amp; Specialty Windows for Bergen County</h1>
+        <p class="lead">A sliding window is often the simplest answer when space is tight, a room needs more ventilation, or a wide view matters. Sliding Windows by Deluxe supplies and installs sliding, vinyl, aluminum, bay and casement windows for New Milford and Bergen County homes, offices and commercial properties.</p>
+        <div class="hero-ctas">
+          <a href="tel:+12014799571" class="btn">Call 201-479-9571</a>
+          <a href="#services" class="btn btn-ghost">See Our Services</a>
+        </div>
+        <div class="hero-stats"><div><strong>Mon–Sat</strong><span>Open six days a week</span></div><div><strong>Sliding</strong><span>Our namesake style</span></div><div><strong>Bergen</strong><span>County-wide service</span></div></div>
+      </div>
+      <div class="photo-frame"><div class="photo-box"><img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80" alt="Sunlit room with large sliding windows" loading="lazy" onerror="this.style.display='none';"></div></div>
+    </div>
+  </div>
+  <div class="section-pad wrap">
+    <div class="section-head"><span class="eyebrow">Why Bergen County Calls Us</span><h2>A Window Shop That Starts With Sliding</h2><p>Sliding windows are what we are named for, and we pair that focus with a wider range of window types, so you can compare real options for each opening in your building instead of settling for one style everywhere.</p></div>
+    <div class="grid-3"><div class="card"><div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" stroke="#E4B655" stroke-width="1.6"/></svg></div><h3>Sliding Window Focus</h3><p>Smooth-gliding units chosen for easy operation, wide glass areas and good use of limited wall space.</p></div><div class="card"><div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#E4B655" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="#E4B655" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3>Homes &amp; Commercial</h3><p>The same careful process covers houses, offices and other commercial properties in the area.</p></div><div class="card"><div class="icon-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="10" rx="2" stroke="#E4B655" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#E4B655" stroke-width="1.6"/></svg></div><h3>Flexible Payment</h3><p>We accept cash and all major credit cards, so settling up is simple.</p></div></div>
+  </div>
+  <div class="section-pad band-alt"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Where Our Calendar Fills Up</span><h2>The Windows We Supply Most</h2></div>
+    <div class="grid-3"><div class="card"><h3>Sliding Windows</h3><p>Horizontal-glide units for bedrooms, basements, kitchens and offices.</p></div><div class="card"><h3>Vinyl &amp; Aluminum Units</h3><p>Low-maintenance vinyl for homes and slim, strong aluminum frames for larger openings.</p></div><div class="card"><h3>Bay &amp; Casement Styles</h3><p>Projecting bays and crank-out casements for rooms that need more character.</p></div></div>
+    <div style="text-align:center;margin-top:30px;"><a href="#services" class="btn">See Every Service</a></div>
+  </div></div>
+  <div class="section-pad wrap">
+    <div class="section-head"><span class="eyebrow">At a Glance</span><h2>About Sliding Windows by Deluxe</h2></div>
+    <div class="grid-2"><div><p>We are a New Milford window company built around one practical idea: the right style in the right opening. A sliding window may be ideal in one room and a casement better in the next.</p><p>That is why our range covers sliding, vinyl, aluminum, bay and casement windows, alongside new window installation for houses and for commercial spaces.</p></div><div><p>Our customers include homeowners updating tired windows, landlords refreshing several units, and businesses that need dependable glazing for offices and storefronts.</p><p>You can reach us Monday to Friday between 10 am and 6 pm and on Saturdays from 10 am to 3 pm. We are closed on Sundays.</p></div></div>
+  </div>
+  <div class="section-pad band-alt"><div class="wrap" style="text-align:center;">
+    <h2>Need Windows That Slide, Swing, or Project?</h2>
+    <p style="max-width:560px;margin:0 auto 20px;">Call or send the form with a few details about your openings. We will help you pick the style that fits each one.</p>
+    <a href="tel:+12014799571" class="btn">Call 201-479-9571 Now</a>
+  </div></div>
+</section>
+
+<section id="about">
+  <div class="section-pad wrap"><div class="about-hero">
+    <div>
+      <span class="eyebrow">About Sliding Windows by Deluxe</span>
+      <h1>Window Supply &amp; Installation in New Milford</h1>
+      <p>Sliding Windows by Deluxe supplies and installs windows for properties across New Milford and the wider Bergen County area. Our name reflects where we started, but the work now includes vinyl and aluminum windows, bay and casement styles, and commercial glazing.</p><p>We pay attention to practical details: how wide the opening is, which way the room faces, how often the window will be used and how much upkeep you want to take on. Those answers point to the right window far more reliably than a brochure does.</p>
+      <div class="badge-row"><div>Sliding Specialists</div><div>Home &amp; Commercial</div><div>Cash &amp; Cards</div></div>
+    </div>
+    <div class="photo-frame" style="border-color:var(--line);background:#fff;"><div class="photo-box"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Sliding window in a bright kitchen" loading="lazy" onerror="this.style.display='none';"></div></div>
+  </div></div>
+  <div class="section-pad band-alt"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">The Difference</span><h2>Why Customers Choose Us</h2></div>
+    <div class="grid-3"><div class="card"><h3>Style Guidance</h3><p>We explain how sliding, casement and bay windows differ in use so you pick with confidence.</p></div><div class="card"><h3>Material Choices</h3><p>Vinyl for low upkeep, aluminum for slim profiles and strength, matched to the setting.</p></div><div class="card"><h3>Residential &amp; Commercial</h3><p>One team that handles apartments, houses, offices and shop-front openings.</p></div><div class="card"><h3>Careful Installation</h3><p>Windows are fitted level, sealed and finished so they operate smoothly for years.</p></div><div class="card"><h3>Simple Payment</h3><p>Cash and all credit cards are accepted.</p></div><div class="card"><h3>Bergen County Reach</h3><p>New Milford is our base, and we serve neighboring Bergen County communities.</p></div></div>
+  </div></div>
+  <div class="section-pad wrap">
+    <div class="section-head"><span class="eyebrow">Questions We Get a Lot</span><h2>Frequently Asked Questions</h2></div>
+    <div style="max-width:760px;margin:0 auto;" id="faqList"><div class="faq-item"><button class="faq-q" type="button"><h4>Why choose a sliding window?</h4><span class="faq-icon">+</span></button><div class="faq-a"><p>Sliding windows glide sideways instead of swinging out, which suits tight spaces, wide openings and spots where a sash would hit furniture or a walkway.</p></div></div><div class="faq-item"><button class="faq-q" type="button"><h4>What is the difference between vinyl and aluminum windows?</h4><span class="faq-icon">+</span></button><div class="faq-a"><p>Vinyl needs very little maintenance and offers good thermal performance, while aluminum is slim and strong, making it a common choice for larger or commercial openings.</p></div></div><div class="faq-item"><button class="faq-q" type="button"><h4>Do you install commercial windows?</h4><span class="faq-icon">+</span></button><div class="faq-a"><p>Yes. We supply and fit windows for offices, retail spaces and other commercial properties, and we can plan work around your opening hours.</p></div></div><div class="faq-item"><button class="faq-q" type="button"><h4>Can you fit bay and casement windows?</h4><span class="faq-icon">+</span></button><div class="faq-a"><p>Yes. Bay windows add projecting space and light, while casements swing outward on a crank for strong ventilation and a tight seal.</p></div></div><div class="faq-item"><button class="faq-q" type="button"><h4>What payment methods do you accept?</h4><span class="faq-icon">+</span></button><div class="faq-a"><p>We accept cash and all major credit cards.</p></div></div><div class="faq-item"><button class="faq-q" type="button"><h4>When can I reach you?</h4><span class="faq-icon">+</span></button><div class="faq-a"><p>We are available Monday to Friday 10 am–6 pm and Saturday 10 am–3 pm. Sundays we are closed.</p></div></div></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-pad wrap">
+    <div class="section-head"><span class="eyebrow">Everything We Cover</span><h1>Sliding, Vinyl &amp; Commercial Windows in New Milford, NJ</h1><p>Here is a closer look at the window types we supply and install for homes and commercial properties across New Milford and Bergen County.</p></div>
+    <div class="svc-filterbar" id="svcFilters"><button data-filter="all" class="active">All</button><button data-filter="residential">Residential</button><button data-filter="commercial">Commercial</button></div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-pad wrap">
+    <div class="section-head"><span class="eyebrow">Get Your Windows Moving</span><h1>Contact Sliding Windows by Deluxe</h1><p>Planning a window project at home or at work? Call us or fill in the form and we will respond during our open hours.</p></div>
+    <div class="contact-grid">
+      <div>
+        <p>People usually contact us for one of three reasons: windows that no longer slide or seal properly, a renovation that needs new openings fitted, or a commercial space that needs better glazing.</p><p>If you are not sure which window type suits a particular room, send us the details. Choosing between sliding, casement or bay is easier once you describe the space.</p><p>We are based in New Milford and serve homes and businesses throughout Bergen County.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you. Our team will contact you shortly.');">
+          <label for="cf-name">Full Name</label>
+          <input id="cf-name" type="text" required placeholder="Your name">
+          <label for="cf-phone">Phone Number</label>
+          <input id="cf-phone" type="tel" required placeholder="(201) 000-0000">
+          <label for="cf-service">Service Needed</label>
+          <select id="cf-service"><option>Sliding Windows</option><option>Vinyl Windows</option><option>Aluminum Windows</option><option>Bay or Casement Windows</option><option>Commercial Windows</option><option>Other</option></select>
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" rows="4" placeholder="Tell us about your windows and when you'd like to hear back"></textarea>
+          <button type="submit" class="btn">Get a Free Quote</button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <h3>Contact Details</h3>
+          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" stroke="#E4B655" stroke-width="1.6" stroke-linejoin="round"/></svg><a href="tel:+12014799571">201-479-9571</a></div>
+          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#E4B655" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="#E4B655" stroke-width="1.6"/></svg><a href="http://slidingwindowsnj.com" target="_blank" rel="noopener">slidingwindowsnj.com</a></div>
+          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12A7 7 0 105 10c0 5.8 7 12 7 12z" stroke="#E4B655" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#E4B655" stroke-width="1.6"/></svg><span>New Milford, NJ 07646</span></div>
+          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#E4B655" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="#E4B655" stroke-width="1.6" stroke-linecap="round"/></svg><span>Mon–Fri 10 am–6 pm &bull; Sat 10 am–3 pm &bull; Sun Closed</span></div>
+          <div class="contact-line"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#E4B655" stroke-width="1.6"/><path d="M3 10h18" stroke="#E4B655" stroke-width="1.6"/></svg><span>Payment: Cash &amp; All Credit Cards</span></div>
+          <div class="social-row"><a href="https://www.google.com/maps?cid=16023084385594729052" aria-label="Google" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="1.6"/></svg></a></div>
+        </div>
+        <div class="map-wrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160973.4949620189!2d-74.082927!3d40.94765205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fbdff9756785%3A0xde5d6e5ad17b625c!2sSliding%20Windows%20by%20Deluxe!5e1!3m2!1sen!2s!4v1791264478648!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="tel:+12014799571" class="floatcall" aria-label="Call Sliding Windows by Deluxe now">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z" fill="#0B1E33"/></svg>
+</a>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand"><div class="logo-badge"><span class="logo-fallback-text">Sliding Windows by Deluxe</span><img src="https://slidingwindowsnj.com/images/logo.png" alt="Sliding Windows by Deluxe logo" loading="lazy" onload="this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div><span class="brandname">Sliding Windows by Deluxe</span></div>
+      <p style="font-size:.9rem;">Sliding, vinyl, aluminum, bay and casement window installation for New Milford, NJ homes and commercial properties.</p>
+    </div>
+    <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <div><h4>Popular Searches</h4><a href="#services">Sliding Windows</a><a href="#services">Vinyl Windows</a><a href="#services">Aluminum Windows</a><a href="#services">Commercial Windows</a></div>
+    <div><h4>Contact</h4><a href="tel:+12014799571">201-479-9571</a><a href="http://slidingwindowsnj.com">slidingwindowsnj.com</a><a href="#contact">New Milford, NJ 07646</a><a href="#contact">Mon–Fri 10–6 &bull; Sat 10–3</a></div>
+  </div>
+  <div class="wrap foot-bottom"><span>&copy; 2026 Sliding Windows by Deluxe. All rights reserved.</span><span>Sliding Windows &amp; Window Installation in New Milford, NJ</span></div>
+</footer>
+
+<script>
+var routes=["home","about","services","contact"];
+function showRoute(r){
+  if(routes.indexOf(r)===-1) r="home";
+  for(var i=0;i<routes.length;i++){var el=document.getElementById(routes[i]);if(el){el.classList.toggle("active",routes[i]===r);}}
+  var links=document.querySelectorAll("nav.mainnav a");
+  for(var j=0;j<links.length;j++){links[j].classList.toggle("current",links[j].getAttribute("data-route")===r);}
+  window.scrollTo({top:0,behavior:"instant"});
+}
+window.addEventListener("hashchange",function(){showRoute(location.hash.replace("#",""));});
+showRoute(location.hash.replace("#","")||"home");
+document.getElementById("faqList").addEventListener("click",function(e){var q=e.target.closest(".faq-q");if(!q)return;q.closest(".faq-item").classList.toggle("open");});
+var services=[{"name": "Sliding Windows", "cat": "residential", "img": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80", "desc": "Sliding windows are built around two or more sashes that glide along a track, so nothing swings into the room or the yard. That makes them especially useful over kitchen counters, in basements, in narrow side yards and in any room where furniture sits close to the glass. The wide, horizontal shape gives broad daylight and a clear view, and operation is a simple push. We help you choose frame color, glass options and the number of moving sashes, and we make sure tracks are fitted cleanly so the window keeps gliding smoothly."}, {"name": "Vinyl Windows", "cat": "residential", "img": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80", "desc": "Vinyl windows are a practical choice for homeowners who would rather not paint, scrape or reseal frames. The material resists moisture and rot, and the hollow frame chambers slow heat transfer, helping rooms stay more comfortable through changing seasons. They are offered in a range of styles including sliding, casement and picture. We walk you through color, grid and glass choices, then install the windows with careful sealing around the frame so the finished result performs the way it is meant to."}, {"name": "Bay Windows", "cat": "residential", "img": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80", "desc": "A bay window typically combines a large center pane with angled side windows, creating a small alcove that reaches beyond the exterior wall. Inside, that space becomes a reading nook, a seat or a spot for plants, and the extra glass brings in daylight from several angles. On the outside, the bay adds depth and character to the front of the house. Because it projects, a bay needs proper support and flashing, so we plan the structure and weather protection carefully before installation."}, {"name": "Casement Windows", "cat": "residential", "img": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80", "desc": "Casement windows are hinged along one side and swing outward using a crank, giving a full, unobstructed opening when ventilation is needed. When closed, the sash compresses against the frame, creating a snug seal that is useful in exposed or drafty rooms. They are also easy to reach and operate in places like bathrooms or above sinks. We help you judge where casements are a good match and where sliding or another style will work better for the opening."}, {"name": "Aluminum Windows", "cat": "commercial", "img": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80", "desc": "Aluminum frames are slim yet strong, which lets them support larger panes of glass without chunky profiles. That is why they are a common choice for shop fronts, offices, apartment buildings and modern homes with big openings. The metal resists warping and stands up well to heavy daily use. We discuss frame finish, glass type and opening style with you, then install the units so they operate smoothly and look clean from both inside and outside."}, {"name": "Commercial Windows", "cat": "commercial", "img": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80", "desc": "Offices, shops, clinics and multi-unit buildings often have different window requirements than a single-family home: larger sizes, more openings, tighter schedules and stronger usage. Our commercial window service covers supply and installation for these properties across Bergen County. We plan the work around your operating hours where possible, coordinate the number of openings being replaced at a time and keep the site tidy. The goal is a set of windows that look professional, operate reliably and improve comfort for staff and visitors."}];
+var svcGrid=document.getElementById("svcGrid");
+function renderServices(filter){
+  svcGrid.innerHTML="";
+  var list=services.filter(function(s){return filter==="all"||s.cat===filter;});
+  for(var i=0;i<list.length;i++){
+    var s=list[i];var card=document.createElement("div");card.className="svc-card";
+    card.innerHTML='<div class="svc-thumb"><img src="'+s.img+'" alt="'+s.name+' New Milford NJ" loading="lazy" onerror="this.style.display=\'none\';"></div><div class="svc-body"><h3>'+s.name+'</h3><p>'+s.desc+'</p><a href="tel:+12014799571" class="svc-cta">Call about '+s.name+' &rarr;</a></div>';
+    svcGrid.appendChild(card);
+  }
+}
+renderServices("all");
+document.getElementById("svcFilters").addEventListener("click",function(e){
+  if(e.target.tagName!=="BUTTON")return;
+  var btns=document.querySelectorAll("#svcFilters button");
+  for(var i=0;i<btns.length;i++){btns[i].classList.remove("active");}
+  e.target.classList.add("active");
+  renderServices(e.target.getAttribute("data-filter"));
+});
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HomeAndConstructionBusiness",
+ "name": "Sliding Windows by Deluxe",
+ "image": "https://slidingwindowsnj.com/images/logo.png",
+ "telephone": "+1-201-479-9571",
+ "priceRange": "$$",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "New Milford",
+  "addressRegion": "NJ",
+  "postalCode": "07646",
+  "addressCountry": "US"
+ },
+ "url": "http://slidingwindowsnj.com",
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "10:00",
+   "closes": "18:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Saturday",
+   "opens": "10:00",
+   "closes": "15:00"
+  }
+ ],
+ "sameAs": [
+  "https://www.google.com/maps?cid=16023084385594729052"
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Service",
+   "serviceType": "Sliding Windows",
+   "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sliding Windows by Deluxe"
+   },
+   "areaServed": "New Milford, NJ"
+  },
+  {
+   "@type": "Service",
+   "serviceType": "Vinyl Windows",
+   "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sliding Windows by Deluxe"
+   },
+   "areaServed": "New Milford, NJ"
+  },
+  {
+   "@type": "Service",
+   "serviceType": "Bay Windows",
+   "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sliding Windows by Deluxe"
+   },
+   "areaServed": "New Milford, NJ"
+  },
+  {
+   "@type": "Service",
+   "serviceType": "Casement Windows",
+   "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sliding Windows by Deluxe"
+   },
+   "areaServed": "New Milford, NJ"
+  },
+  {
+   "@type": "Service",
+   "serviceType": "Aluminum Windows",
+   "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sliding Windows by Deluxe"
+   },
+   "areaServed": "New Milford, NJ"
+  },
+  {
+   "@type": "Service",
+   "serviceType": "Commercial Windows",
+   "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Sliding Windows by Deluxe"
+   },
+   "areaServed": "New Milford, NJ"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Why choose a sliding window?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sliding windows glide sideways instead of swinging out, which suits tight spaces, wide openings and spots where a sash would hit furniture or a walkway."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between vinyl and aluminum windows?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Vinyl needs very little maintenance and offers good thermal performance, while aluminum is slim and strong, making it a common choice for larger or commercial openings."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you install commercial windows?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We supply and fit windows for offices, retail spaces and other commercial properties, and we can plan work around your opening hours."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you fit bay and casement windows?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Bay windows add projecting space and light, while casements swing outward on a crank for strong ventilation and a tight seal."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What payment methods do you accept?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We accept cash and all major credit cards."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When can I reach you?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We are available Monday to Friday 10 am–6 pm and Saturday 10 am–3 pm. Sundays we are closed."
+   }
+  }
+ ]
+}
+</script>
+</body>
+</html>
